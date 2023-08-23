@@ -50,6 +50,7 @@ class BankAccount:
             raise KeyError("This method just can be called from a subclass")
 
     def __repr__(self) -> str:
+        #instance_name = "".join([t.__name__ for t in type(self).__mro__[:-1]])
         return f"A {self.__class__.__name__} with ${self._initial_balance} in it"
         
     deposit = property(fset=deposit)
